@@ -1,0 +1,211 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 1440px;
+    height: 100vh;
+    background-image: url(../images/bg-desktop.svg);
+    background-color: var(--primary-hard);
+    display: grid;
+    grid-template-areas: "header header"
+                         "hero about"
+                         ". footer";
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 48px;
+
+}
+
+@media (max-width: 375px){
+    body{
+        width: 375px;
+        background-image: url(../images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: 375px;
+        display: grid;
+        grid-template-areas: "header"
+                             "hero"
+                             "about"
+                             "footer";
+        grid-template-columns: 375px;
+    }
+}
+
+.header{
+    grid-area: header;
+    padding-top: 53px;
+    padding-left: 70px;
+}
+
+@media(max-width: 375px){
+    .header{
+        padding-top: 30px;
+        padding-left: 40px;
+    }
+}
+
+.header img{
+    width: 215px;
+}
+
+@media(max-width: 375px){
+    .header img{
+        width:100px
+    }
+}
+
+.hero{
+    grid-area: hero;
+    padding-top: 85px;
+    padding-left: 74px;
+}
+
+@media(max-width: 375px){
+    .hero{
+        padding-top: 60px;
+        padding-left: 40px;
+    }
+}
+
+@media(max-width: 375px){
+    .hero img{
+        width: 290px;
+    }
+}
+
+.about{
+    grid-area: about;
+    height: 60%;
+    width: 85%;
+    margin-top: 130px;
+}
+
+@media(max-width: 375px){
+    .about{
+        width: 375px;
+        text-align: center;
+    }
+}
+
+.about .info-rede{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media(max-width: 375px){
+    .about .info-rede{
+        display: flex;
+        align-items: center;
+    }
+}
+.about .info-rede h2{
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-weight: 600;
+    font-size: 3.9rem;
+    margin-left: 5px;
+}
+
+@media(max-width: 375px){
+    .about .info-rede h2{
+        font-size: 2.5rem;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+.about .info-rede p{
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 28px;
+    margin-top: 23px;
+    margin-left: 5px;
+}
+
+@media(max-width: 375px){
+    .about .info-rede p{
+        text-align: center;
+        font-size: 1.5rem;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+.about .info-rede a{
+    width: 200px;
+    height: 55px;
+    margin-top: 21px;
+    margin-left: 4px;
+    border-radius: 30px;
+    background-color: #fff;
+}
+
+.about .info-rede a:hover{
+    color: #fff;
+    background-color: var(--primary-soft);
+    transition: 0.4s ease-in-out;
+}
+
+.about .info-rede .btn{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding-top: 12px;
+    padding-left: 62px;
+}
+
+@media(max-width: 375px){
+    .about .info-rede .btn{
+        text-align: justify;
+    }
+}
+
+.footer{
+    grid-area: footer;
+    padding-left: 370px;
+    padding-top: 15px;
+}
+
+@media(max-width: 375px){
+    .footer{
+        padding-left: 100px;
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+}
+
+.footer .social{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer .social a{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 7px;
+    border: #fff solid 1px;
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width: 375px){
+    .about .info-rede{
+        padding: 0 auto;
+    }
+}
+
+.footer .social a:hover{
+    color: var(--primary-soft);
+    transition: 0.4s ease-in-out;
+    border-color: var(--primary-s);
+}
